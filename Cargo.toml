@@ -1,0 +1,23 @@
+[package]
+name = "best_practice_registration"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Axum → async web framework
+axum = "0.8.4"
+
+# Tokio → async runtime (required by Axum)
+tokio = { version = "1", features = ["full"] }
+
+# Serde → (de)serialisation for JSON
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# UUID → generate unique IDs (players, sessions)
+uuid = { version = "1", features = ["v4", "serde"] }
+
+
+# password hashing
+argon2 = "0.4"
+rand = "0.8"
